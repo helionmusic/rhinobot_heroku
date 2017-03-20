@@ -1,0 +1,6 @@
+.idea/
+*.pyc
+~*/
+dectalk/
+
+discord.log
