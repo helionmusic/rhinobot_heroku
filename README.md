@@ -50,6 +50,7 @@ Once both git and heroku cli are installed open the project's root folder in cmd
 Now type the following:  
 * ``heroku login``  
 * Enter your credentials  
+* ``git init``  
 * ``heroku git:remote -a heroku_application_name`` Obviously replace heroku_application_name with the exact name you've given your heroku app when creating it  
 * ``heroku buildpacks:set heroku/python``  
 * ``heroku buildpacks:add https://github.com/Crazycatz00/heroku-buildpack-libopus.git``  
