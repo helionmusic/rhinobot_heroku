@@ -1,8 +1,9 @@
-discord.py[voice]
+discord.py[voice] ~= 0.16.0
+pip
+youtube_dl
+colorlog
+cffi --only-binary all; 
 aiohttp
 websockets
 chardet
-youtube_dl
-pip
-cffi==1.6.0
 opuslib
