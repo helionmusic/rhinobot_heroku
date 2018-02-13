@@ -60,19 +60,20 @@ Now type the following:
 Before continuing, don't close the command prompt and make sure the project's root folder contains the following 3 files with the same contents  
  **requirements.txt**  
 ```
-discord.py[voice]
-aiohttp
+discord.py[voice] ~= 0.16.0
+pip
+youtube_dl
+colorlog
+cffi --only-binary all; 
+aiohttp ~= 2.3.10
 websockets
 chardet
-youtube_dl
-pip
-cffi==1.6.0
 opuslib
 ```
 
 **runtime.txt**  
 ```
-python-3.6.0
+python-3.6.4
 ```
 
  **Procfile** (no extension)  

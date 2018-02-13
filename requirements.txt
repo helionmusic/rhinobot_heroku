@@ -3,7 +3,7 @@ pip
 youtube_dl
 colorlog
 cffi --only-binary all; 
-aiohttp
+aiohttp ~= 2.3.10
 websockets
 chardet
 opuslib
