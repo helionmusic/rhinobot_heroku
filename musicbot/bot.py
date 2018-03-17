@@ -1445,6 +1445,9 @@ class MusicBot(discord.Client):
         groups = matches.groups() if matches is not None else []
         song_url = "https://www.youtube.com/playlist?" + groups[0] if len(groups) > 0 else song_url
 
+        if (song_url.startswith('https://open.spotify.com/track/')):
+            song_url = song_url.replace("https://open.spotify.com/track/", "spotify:track:")
+
         if song_url.startswith('spotify:'):  # treat it as probably a spotify URI
             if self.config._spotify:
                 song_url = song_url.split(":", 1)[1]
