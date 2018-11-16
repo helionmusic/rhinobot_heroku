@@ -1,5 +1,7 @@
 # This repo is a version of RhinoBot ready for deployment on Heroku
 
+Just to note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on a Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself.  
+
 The original RhinoBot is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
@@ -64,7 +66,7 @@ Before continuing, don't close the command prompt and make sure the project's ro
 ```
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 pip
-youtube_dl
+youtube_dl==2018.11.07
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 2.3.10
