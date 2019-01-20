@@ -1,6 +1,6 @@
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 pip
-youtube_dl==2018.11.07
+youtube_dl==2019.01.17
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 2.3.10
