@@ -103,6 +103,12 @@ If you've set it to auto join a voice channel it should automatically join it.
 Enjoy your bot.
 
 
+# _____________________________________
+# Contributors
+
+* [HelionMusic](https://github.com/helionmusic)
+* [SnGmng](https://github.com/SnGmng)
+
 
 
 # _____________________________________ 
