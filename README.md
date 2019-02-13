@@ -58,7 +58,7 @@ Now type the following:
 * ``heroku git:remote -a heroku_application_name`` Obviously replace heroku_application_name with the exact name you've given your heroku app when creating it  
 * ``heroku buildpacks:set heroku/python``  
 * ``heroku buildpacks:add https://github.com/Crazycatz00/heroku-buildpack-libopus.git``  
-* ``heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git``  
+* ``heroku buildpacks:add https://github.com/kitcast/buildpack-ffmpeg.git``  
 * ``heroku buildpacks:add https://github.com/guilherme-otran/heroku-buildpack-ffprobe.git``  
 
 Before continuing, don't close the command prompt and make sure the project's root folder contains the following 3 files with the same contents  
