@@ -66,7 +66,7 @@ Before continuing, don't close the command prompt and make sure the project's ro
 ```
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 pip
-youtube_dl==2018.11.07
+youtube_dl==2019.01.17
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 2.3.10
@@ -102,6 +102,12 @@ If you've set it to auto join a voice channel it should automatically join it.
 
 Enjoy your bot.
 
+
+# _____________________________________
+# Contributors
+
+* [HelionMusic](https://github.com/helionmusic)
+* [SnGmng](https://github.com/SnGmng)
 
 
 
