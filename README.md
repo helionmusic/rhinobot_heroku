@@ -78,7 +78,7 @@ pynacl==1.2.1
 
 **runtime.txt**  
 ```
-python-3.7.0
+python-3.7.2
 ```
 
  **Procfile** (no extension)  
