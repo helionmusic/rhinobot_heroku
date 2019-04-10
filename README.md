@@ -66,7 +66,7 @@ Before continuing, don't close the command prompt and make sure the project's ro
 ```
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 pip
-youtube_dl==2019.04.01
+youtube_dl==2019.04.07
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 2.3.10
