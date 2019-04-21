@@ -64,7 +64,7 @@ Now type the following:
 Before continuing, don't close the command prompt and make sure the project's root folder contains the following 3 files with the same contents  
  **requirements.txt**  
 ```
-git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
+discord.py[voice]
 pip
 youtube_dl==2019.04.17
 colorlog
