@@ -107,6 +107,7 @@ Enjoy your bot.
 # Contributors
 
 * [HelionMusic](https://github.com/helionmusic)
+* [codeinteger6](https://github.com/codeinteger6)
 * [SnGmng](https://github.com/SnGmng)
 
 
