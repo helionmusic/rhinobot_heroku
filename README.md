@@ -1,12 +1,12 @@
-# This repo is a *non-official* version of RhinoBot ready for deployment on Heroku
+# This repo is a *non-official* version of MusicBot ready for deployment on Heroku
 
-Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on a Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself. **As this bot is modified, do not expect any support on their official Discord server.**
+Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself. **As this bot is modified, do not expect any support on their official Discord server.**
 
-The original RhinoBot is available [here](https://github.com/Just-Some-Bots/MusicBot).
+The original MusicBot (previously known as RhinoBot) is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on Rhinobot version 1.9.8_4
+This branch is based on MusicBot version 1.9.8_4
 
 ### Instructions to get this up and working:
 I'm assuming you don't really know much about how to get this stuff set up so this is as basic of a tutorial as I think is necessary.  
@@ -18,11 +18,11 @@ This is the method I personally used to get it up and running.
 First of all: [Create a Discord Bot account](https://discordpy.readthedocs.io/en/rewrite/discord.html)  
 Don't forget to [add it to your Discord server](https://discordpy.readthedocs.io/en/rewrite/discord.html#inviting-your-bot)  
   
-Clone this repository. I've downloaded it on my side to get everything setup and uploaded through the Heroku CLI
+Clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window. I've downloaded it on my side to get everything setup and uploaded through the Heroku CLI
 
 
 Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
-If you are unsure how to do this step, refer to the RhinoBot configuration guide [here](https://just-some-bots.github.io/MusicBot/#guidesconfiguration)  
+If you are unsure how to do this step, refer to the MusicBot configuration guide [here](https://just-some-bots.github.io/MusicBot/using/configuration/)  
 Edit the `options.ini` and the `permissions.ini` to your liking.  
 Remember however to leave the `SaveVideos = no` in your options otherwise you will quickly run out of space on the Heroku server
 
@@ -113,15 +113,9 @@ Enjoy your bot.
 
 
 # _____________________________________ 
-# Below is the original Rhinobot's README.md 
+# Below is the original README.md 
 
 # MusicBot
-
-**About this branch**
-
-This branch of MusicBot is only compatible with the `rewrite` version of the discord.py library, which can be installed using `python3 -m pip install -U git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]`. Since it is a dependency in `requirements.txt`, the library should be automatically installed with running `update.py`.
-
----
 
 [![GitHub release](https://img.shields.io/github/release/Just-Some-Bots/MusicBot.svg?style=flat-square)](https://just-some-bots.github.io/MusicBot/)
 [![Python](https://img.shields.io/badge/python-3.5%2C%203.6-blue.svg?style=flat-square)](https://www.python.org/downloads/)
@@ -138,7 +132,7 @@ The main configuration file is `config/options.ini`, but it is not included by d
 
 ### Commands
 
-There are many commands that can be used with the bot. Most notably, the `play <url>` command (preceded by your command prefix) will download, process, and play a song from YouTube or a similar site. A full list of commands are available [here](https://just-some-bots.github.io/MusicBot/using/commands/ "Commands").
+There are many commands that can be used with the bot. Most notably, the `play <url>` command (preceded by your command prefix) will download, process, and play a song from YouTube or a similar site. A full list of commands is available [here](https://just-some-bots.github.io/MusicBot/using/commands/ "Commands").
 
 ### Further reading
 
