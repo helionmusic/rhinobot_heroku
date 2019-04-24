@@ -1,12 +1,12 @@
-# This repo is a *non-official* version of RhinoBot ready for deployment on Heroku
+# This repo is a *non-official* version of MusicBot ready for deployment on Heroku
 
 Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself. **As this bot is modified, do not expect any support on their official Discord server.**
 
-The original RhinoBot is available [here](https://github.com/Just-Some-Bots/MusicBot).
+The original MusicBot (previously known as RhinoBot) is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on Rhinobot version 1.9.8_4
+This branch is based on MusicBot version 1.9.8_4
 
 ### Instructions to get this up and working:
 I'm assuming you don't really know much about how to get this stuff set up so this is as basic of a tutorial as I think is necessary.  
@@ -22,7 +22,7 @@ Clone this repository by typing `git clone https://github.com/helionmusic/rhinob
 
 
 Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
-If you are unsure how to do this step, refer to the RhinoBot configuration guide [here](https://just-some-bots.github.io/MusicBot/using/configuration/)  
+If you are unsure how to do this step, refer to the MusicBot configuration guide [here](https://just-some-bots.github.io/MusicBot/using/configuration/)  
 Edit the `options.ini` and the `permissions.ini` to your liking.  
 Remember however to leave the `SaveVideos = no` in your options otherwise you will quickly run out of space on the Heroku server
 
@@ -113,7 +113,7 @@ Enjoy your bot.
 
 
 # _____________________________________ 
-# Below is the original Rhinobot's README.md 
+# Below is the original README.md 
 
 # MusicBot
 
