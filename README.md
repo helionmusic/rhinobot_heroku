@@ -6,7 +6,7 @@ The original MusicBot (previously known as RhinoBot) is available [here](https:/
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on MusicBot version 1.9.8_4
+This branch is based on MusicBot release-260419
 
 ### Instructions to get this up and working:
 I'm assuming you don't really know much about how to get this stuff set up so this is as basic of a tutorial as I think is necessary.  
