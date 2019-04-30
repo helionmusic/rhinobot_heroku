@@ -65,7 +65,7 @@ Before continuing, don't close the command prompt and make sure the project's ro
 ```
 discord.py[voice]
 pip
-youtube_dl==2019.04.24
+youtube_dl==2019.04.30
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 3.5.4
