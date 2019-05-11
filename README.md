@@ -65,7 +65,7 @@ Before continuing, don't close the command prompt and make sure the project's ro
 ```
 discord.py[voice]
 pip
-youtube_dl==2019.04.30
+youtube_dl==2019.05.11
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 3.5.4
@@ -99,8 +99,19 @@ Click the edit icon, enable the worker and confirm.
 That's it. The bot should instantly fire up and should be logged in to your discord server within the next minute.  
 If you've set it to auto join a voice channel it should automatically join it.
 
-Enjoy your bot.
+**Updating youtube-dl**
+This bot, like many other music bots rely on a component named youtube-dl. Sometimes sources like YouTube may break this and the bot may stop working. If you suddenly get errors when using the bot, updating the component may help.
 
+We try our best to update the repo with the latest youtube-dl version for deployment, but you can easily do it yourself by editing the requirements.txt file.
+
+Use the date of the latest release that is found at https://github.com/ytdl-org/youtube-dl/releases. For example, if the latest youtube-dl version is 2019.05.11, change the youtube-dl date in the requirements.txt file to 2019.05.11. Save the file and push it to Heroku using the instructions given earlier.
+
+**Alternative ffmpeg buildpack**
+The ffmpeg buildpack which is given above always uses the latest version upon build, very rarely it may cause issues. You may use this buildpack as a temporary solution if you encounter issues.
+
+https://github.com/kitcast/buildpack-ffmpeg.git
+
+To change the buildpack go to your bot application in Heroku, select settings, remove the current ffmpeg buildpack and add the above one by pasting the URL in the add buildpack dialog box. Make sure it's at the last position of the buildpack list.
 
 # _____________________________________
 # Contributors
@@ -116,8 +127,9 @@ Enjoy your bot.
 
 # MusicBot
 
-[![GitHub release](https://img.shields.io/github/release/Just-Some-Bots/MusicBot.svg?style=flat-square)](https://just-some-bots.github.io/MusicBot/)
-[![Python](https://img.shields.io/badge/python-3.5%2C%203.6-blue.svg?style=flat-square)](https://www.python.org/downloads/)
+[![GitHub stars](https://img.shields.io/github/stars/Just-Some-Bots/MusicBot.svg)](https://github.com/Just-Some-Bots/MusicBot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Just-Some-Bots/MusicBot.svg)](https://github.com/Just-Some-Bots/MusicBot/network)
+[![Python version](https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7-blue.svg)](https://python.org)
 [![Discord](https://discordapp.com/api/guilds/129489631539494912/widget.png?style=shield)](https://discord.gg/bots)
 
 MusicBot is the original Discord music bot written in [Python](https://www.python.org "Python homepage") 3.5+, using the [discord.py](https://github.com/Rapptz/discord.py) library. It plays requested songs from YouTube and other services into a Discord server (or multiple servers). Besides, if the queue becomes empty MusicBot will play through a list of existing songs with configuration. The bot features a permission system allowing owners to restrict commands to certain people. As well as playing songs, MusicBot is capable of streaming live media into a voice channel (experimental).
