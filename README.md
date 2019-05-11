@@ -100,6 +100,7 @@ That's it. The bot should instantly fire up and should be logged in to your disc
 If you've set it to auto join a voice channel it should automatically join it.
 
 **Updating youtube-dl**
+
 This bot, like many other music bots rely on a component named youtube-dl. Sometimes sources like YouTube may break this and the bot may stop working. If you suddenly get errors when using the bot, updating the component may help.
 
 We try our best to update the repo with the latest youtube-dl version for deployment, but you can easily do it yourself by editing the requirements.txt file.
@@ -107,6 +108,7 @@ We try our best to update the repo with the latest youtube-dl version for deploy
 Use the date of the latest release that is found at https://github.com/ytdl-org/youtube-dl/releases. For example, if the latest youtube-dl version is 2019.05.11, change the youtube-dl date in the requirements.txt file to 2019.05.11. Save the file and push it to Heroku using the instructions given earlier.
 
 **Alternative ffmpeg buildpack**
+
 The ffmpeg buildpack which is given above always uses the latest version upon build, very rarely it may cause issues. You may use this buildpack as a temporary solution if you encounter issues.
 
 https://github.com/kitcast/buildpack-ffmpeg.git
