@@ -1,12 +1,14 @@
 # This repo is a *non-official* version of MusicBot ready for deployment on Heroku
 
-Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself. **As this bot is modified, do not expect any support on their official Discord server.**
+Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself.
+
+**As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating youtube-dl and/or using the alternative ffmpeg buildpack first using the instructions given near the end of this readme to see if it fixes your problem.**
 
 The original MusicBot (previously known as RhinoBot) is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on MusicBot release-260419
+This branch is based on MusicBot release-120519
 
 ### Instructions to get this up and working:
 I'm assuming you don't really know much about how to get this stuff set up so this is as basic of a tutorial as I think is necessary.  
