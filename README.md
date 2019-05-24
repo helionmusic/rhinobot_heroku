@@ -2,7 +2,7 @@
 
 Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself.
 
-**As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating youtube-dl and/or using the alternative ffmpeg buildpack first using the instructions given near the end of this readme to see if it fixes your problem.**
+**As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating youtube-dl first using the instructions given near the end of this readme to see if it fixes your problem.**
 
 The original MusicBot (previously known as RhinoBot) is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
@@ -108,14 +108,6 @@ This bot, like many other music bots rely on a component named youtube-dl. Somet
 We try our best to update the repo with the latest youtube-dl version for deployment, but you can easily do it yourself by editing the requirements.txt file.
 
 Use the date of the latest release that is found at https://github.com/ytdl-org/youtube-dl/releases. For example, if the latest youtube-dl version is 2019.05.11, change the youtube-dl date in the requirements.txt file to 2019.05.11. Save the file and push it to Heroku using the instructions given earlier.
-
-**Alternative ffmpeg buildpack**
-
-The ffmpeg buildpack which is given above always uses the latest version upon build, very rarely it may cause issues. You may use this buildpack as a temporary solution if you encounter issues.
-
-https://github.com/kitcast/buildpack-ffmpeg.git
-
-To change the buildpack go to your bot application in Heroku, select settings, remove the current ffmpeg buildpack and add the above one by pasting the URL in the add buildpack dialog box. Make sure it's at the last position of the buildpack list.
 
 # _____________________________________
 # Contributors
