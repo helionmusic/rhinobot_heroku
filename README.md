@@ -11,6 +11,10 @@ This is to host the Discord music bot onto your own free Heroku cloud account.
 This branch is based on MusicBot release-120519
 
 ### Instructions to get this up and working:
+**Your bot will be shut down by Heroku on the last week of each month. If you're ok with this, you can follow the tutorial below. Otherwise you will need to add a credit card to have enough hours for a whole month (provided you don't have any other applications on your Heroku account)**
+
+**If you are able to verify your Heroku account using a credit card, we recommend you make a free AWS account instead and run the bot on there using the official MusicBot instructions. At the end of the day it's up to you whether you want to use Heroku or not.**
+
 I'm assuming you don't really know much about how to get this stuff set up so this is as basic of a tutorial as I think is necessary.  
 I'm also assuming you're on Windows and are willing to set this up through the Heroku CLI. Although everything should work the same regardless of OS (except the PATH variables stuff if necessary).  
 This is the method I personally used to get it up and running.
