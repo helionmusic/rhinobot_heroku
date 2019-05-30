@@ -98,9 +98,7 @@ Once those are set correctly continue typing the following into command prompt
 This will start pushing the project to the Heroku server and will build it instantly afterwards. This might take some time.
 
 Once completed, the build should push without any problems. And the Heroku worker will be set to run the bot when enabled.  
-To do this, go back to the [Heroku dashboard](https://dashboard.heroku.com/) and select your app  
-There's a section ``Dyno formation`` on the home page of the app. Click ``Configure Dynos``  
-Click the edit icon, enable the worker and confirm.
+To do this, type ``heroku ps:scale worker=1`` in the command prompt.
 
 That's it. The bot should instantly fire up and should be logged in to your discord server within the next minute.  
 If you've set it to auto join a voice channel it should automatically join it.
