@@ -2,13 +2,13 @@
 
 Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself.
 
-**As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating youtube-dl first using the instructions given near the end of this readme to see if it fixes your problem.**
+**As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating the dependencies first using the instructions given near the end of this readme to see if it fixes your problem.**
 
 The original MusicBot (previously known as RhinoBot) is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on MusicBot release-120519
+This branch is based on MusicBot release-120519. Previous releases of the bot can be found in the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
 
 ### Instructions to get this up and working:
 **Your bot will be shut down by Heroku on the last week of each month. If you're ok with this, you can follow the tutorial below. Otherwise you will need to add a credit card to have enough hours for a whole month (provided you don't have any other applications on your Heroku account)**
@@ -24,7 +24,7 @@ This is the method I personally used to get it up and running.
 First of all: [Create a Discord Bot account](https://discordpy.readthedocs.io/en/rewrite/discord.html)  
 Don't forget to [add it to your Discord server](https://discordpy.readthedocs.io/en/rewrite/discord.html#inviting-your-bot)  
   
-Clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window. I've downloaded it on my side to get everything setup and uploaded through the Heroku CLI
+Clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window. If you want an earlier version of the bot for whatever reason, check out the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
 
 
 Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
@@ -71,11 +71,11 @@ Before continuing, don't close the command prompt and make sure the project's ro
 ```
 discord.py[voice]
 pip
-youtube_dl==2019.05.20
+youtube_dl
 colorlog
 cffi --only-binary all; 
-aiohttp ~= 3.5.4
-websockets
+aiohttp>=3.3.0,<3.6.0
+websockets>=6.0,<7.0
 chardet
 opuslib
 pynacl==1.2.1
@@ -103,13 +103,11 @@ To do this, type ``heroku ps:scale worker=1`` in the command prompt.
 That's it. The bot should instantly fire up and should be logged in to your discord server within the next minute.  
 If you've set it to auto join a voice channel it should automatically join it.
 
-**Updating youtube-dl**
+**Updating dependencies**
 
-This bot, like many other music bots rely on a component named youtube-dl. Sometimes sources like YouTube may break this and the bot may stop working. If you suddenly get errors when using the bot, updating the component may help.
-
-We try our best to update the repo with the latest youtube-dl version for deployment, but you can easily do it yourself by editing the requirements.txt file.
-
-Use the date of the latest release that is found at https://github.com/ytdl-org/youtube-dl/releases. For example, if the latest youtube-dl version is 2019.05.11, change the youtube-dl date in the requirements.txt file to 2019.05.11. Save the file and push it to Heroku using the instructions given earlier.
+This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
+The easiest way to update them is to delete the Heroku app, create and deploy the bot again. Before you do, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
+You are more than welcome to submit a PR of the new requirements if we haven't updated them!
 
 # _____________________________________
 # Contributors
@@ -130,9 +128,9 @@ Use the date of the latest release that is found at https://github.com/ytdl-org/
 [![Python version](https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7-blue.svg)](https://python.org)
 [![Discord](https://discordapp.com/api/guilds/129489631539494912/widget.png?style=shield)](https://discord.gg/bots)
 
-MusicBot is the original Discord music bot written in [Python](https://www.python.org "Python homepage") 3.5+, using the [discord.py](https://github.com/Rapptz/discord.py) library. It plays requested songs from YouTube and other services into a Discord server (or multiple servers). Besides, if the queue becomes empty MusicBot will play through a list of existing songs with configuration. The bot features a permission system allowing owners to restrict commands to certain people. As well as playing songs, MusicBot is capable of streaming live media into a voice channel (experimental).
+MusicBot is the original Discord music bot written for [Python](https://www.python.org "Python homepage") 3.5+, using the [discord.py](https://github.com/Rapptz/discord.py) library. It plays requested songs from YouTube and other services into a Discord server (or multiple servers). Besides, if the queue becomes empty MusicBot will play through a list of existing songs with configuration. The bot features a permission system allowing owners to restrict commands to certain people. As well as playing songs, MusicBot is capable of streaming live media into a voice channel (experimental).
 
-![Main](https://i.imgur.com/EZljY52.png)
+![Main](https://i.imgur.com/FWcHtcS.png)
 
 ## Setup
 Setting up the MusicBot is relatively painless - just follow one of the [guides](https://just-some-bots.github.io/MusicBot/). After that, configure the bot to ensure its connection to Discord.
