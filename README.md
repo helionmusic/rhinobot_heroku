@@ -106,7 +106,9 @@ If you've set it to auto join a voice channel it should automatically join it.
 **Updating dependencies**
 
 This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
+
 The easiest way to update them is to delete the Heroku app, create and deploy the bot again. Before you do, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
+
 You are more than welcome to submit a PR of the new requirements if we haven't updated them!
 
 # _____________________________________
