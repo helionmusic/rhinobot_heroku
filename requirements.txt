@@ -1,10 +1,10 @@
 discord.py[voice]
 pip
-youtube_dl==2019.05.20
+youtube_dl
 colorlog
 cffi --only-binary all; 
-aiohttp ~= 3.5.4
-websockets
+aiohttp>=3.3.0,<3.6.0
+websockets>=6.0,<7.0
 chardet
 opuslib
 pynacl==1.2.1
