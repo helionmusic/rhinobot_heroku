@@ -111,9 +111,23 @@ If you've set it to auto join a voice channel it should automatically join it.
 
 This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
 
-The easiest way to update them is to delete the Heroku app, create and deploy the bot again. Before you do, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
+The important ones are [discord.py](https://github.com/Rapptz/discord.py/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and include these latest versions in your requirements.txt in the following format:
 
-You are more than welcome to submit a PR of the new requirements if we haven't updated them!
+```
+discord.py[voice]==1.2.2
+pip
+youtube_dl==2019.06.21
+colorlog
+cffi --only-binary all; 
+aiohttp ~= 3.5.4
+websockets>=6.0,<7.0
+chardet
+opuslib
+pynacl==1.2.1
+```
+Here's an example format given above. They're using the current versions at the time of this writing (discord.py 1.2.2 and youtube-dl 2019.06.21), simply replace these versions with the latest ones found in the releases section of these two dependencies.
+
+Also, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
 
 # _____________________________________
 # Contributors
