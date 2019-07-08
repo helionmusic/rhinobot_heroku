@@ -34,7 +34,9 @@ Clone this repository by typing `git clone https://github.com/helionmusic/rhinob
 Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
 If you are unsure how to do this step, refer to the MusicBot configuration guide [here](https://just-some-bots.github.io/MusicBot/using/configuration/)  
 Edit the `options.ini` and the `permissions.ini` to your liking.  
-Remember however to leave the `SaveVideos = no` in your options otherwise you will quickly run out of space on the Heroku server
+Remember however to leave the `SaveVideos = no` in your options otherwise you will quickly run out of space on the Heroku server.
+
+**NEVER MAKE YOUR BOT TOKEN PUBLIC AS ANYONE CAN USE THE TOKEN TO "HIJACK" THE BOT. You can regenerate the bot token via the Discord developer portal if you accidentally made it public anywhere.**
 
 
 Now create a free Heroku account [here](https://www.heroku.com/) if you haven't already
