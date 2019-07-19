@@ -393,6 +393,13 @@ class MusicBot(discord.Client):
 
         await vc.disconnect()
 
+    async def force_disconnect_from_channel(self, channel):
+        try:
+            voice_client = await self.get_voice_client(channel)
+            await voice_client.disconnect(force=True)
+        except:
+            return
+
     async def disconnect_all_voice_clients(self):
         for vc in list(self.voice_clients).copy():
             await self.disconnect_voice_client(vc.channel.guild)
@@ -416,6 +423,7 @@ class MusicBot(discord.Client):
 
         async with self.aiolocks[_func_() + ':' + str(guild.id)]:
             if deserialize:
+                await self.force_disconnect_from_channel(channel)
                 voice_client = await self.get_voice_client(channel)
                 player = await self.deserialize_queue(guild, voice_client)
 
