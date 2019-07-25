@@ -14,5 +14,6 @@ assignees: ''
 
 **Tried updating the dependencies?** <!-- Most of the time, updating them should make the bot work again. Follow the instructions in the readme to update them. -->
 - [ ] Yes, they are up to date.
+- [ ] Not applicable for this issue.
 
 **Bot version** <!-- Please let us know the release version of the bot you are using. -->
