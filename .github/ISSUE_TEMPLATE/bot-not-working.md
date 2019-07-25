@@ -7,14 +7,12 @@ assignees: ''
 
 ---
 
-**Describe the problem**
-Replace this text with the description of your problem
+**Describe the problem** <!-- Please describe your problem below this line -->
 
-**Have you followed all the instructions?**
-Insert answer here
+**Have you followed all the instructions?** <!-- Replace the [ ] below with [X] to indicate you followed the instructions. Otherwise, please go back and try to deploy the bot again following the instructions properly. -->
+- [ ] Yes, I followed the instructions properly.
 
-**Tried updating the dependencies?**
-Insert answer here
+**Tried updating the dependencies?** <!-- Most of the time, updating them should make the bot work again. Follow the instructions in the readme to update them. -->
+- [ ] Yes, they are up to date.
 
-**Bot version**
-Please let us know the release version of the bot you are using.
+**Bot version** <!-- Please let us know the release version of the bot you are using. -->
