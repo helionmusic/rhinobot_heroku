@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-**Your question**
-Replace this text with your query.
+**Your question** <!-- Please type your question below this line -->
 
-**Bot version**
-Please include the release version of the bot you are using.
+**Bot version** <!-- Please include the release version of the bot you are using. -->
