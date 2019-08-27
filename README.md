@@ -4,11 +4,11 @@ Just a quick note: ***This is not in any way official***. This is just a guide o
 
 **As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating the dependencies first using the instructions given near the end of this readme to see if it fixes your problem.**
 
-The original MusicBot (previously known as RhinoBot) is available [here](https://github.com/Just-Some-Bots/MusicBot).
+The original MusicBot is available [here](https://github.com/Just-Some-Bots/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on MusicBot release-120519. Previous releases of the bot can be found in the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
+This branch is based on MusicBot release-260819. Previous releases of the bot can be found in the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
 
 ### Instructions to get this up and working:
 **Your bot will be shut down by Heroku on the last week of each month. If you're ok with this, you can follow the tutorial below. Otherwise you will need to add a credit card to have enough hours for a whole month (provided you don't have any other applications on your Heroku account)**
@@ -116,9 +116,9 @@ This bot relies on several components listed in the [requirements.txt](https://g
 The important ones are [discord.py](https://github.com/Rapptz/discord.py/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and include these latest versions in your requirements.txt in the following format:
 
 ```
-discord.py[voice]==1.2.2
+discord.py[voice]==1.2.3
 pip
-youtube_dl==2019.06.21
+youtube_dl==2019.08.13
 colorlog
 cffi --only-binary all; 
 aiohttp ~= 3.5.4
@@ -127,7 +127,7 @@ chardet
 opuslib
 pynacl==1.2.1
 ```
-Here's an example format given above. They're using the current versions at the time of this writing (discord.py 1.2.2 and youtube-dl 2019.06.21), simply replace these versions with the latest ones found in the releases section of these two dependencies.
+Here's an example format given above. They're using the current versions at the time of this writing (discord.py 1.2.3 and youtube-dl 2019.08.13), simply replace these versions with the latest ones found in the releases section of these two dependencies.
 
 Also, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
 
