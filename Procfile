@@ -1,1 +1,1 @@
-worker: python run.py
+orker: python run.py
