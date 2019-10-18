@@ -1,6 +1,6 @@
-git+https://github.com/Rapptz/discord.py@master#egg=discord.py[voice]
+discord.py[voice]>=1.2.4
 pip
-youtube_dl
+youtube_dl>=2019.10.16
 colorlog
 cffi --only-binary all; 
 aiohttp>=3.3.0,<3.6.0
