@@ -86,25 +86,11 @@ To do this, type ``heroku ps:scale worker=1`` in the command prompt.
 That's it. The bot should instantly fire up and should be logged in to your discord server within the next minute.  
 If you've set it to auto join a voice channel it should automatically join it.
 
-**Updating youtube-dl**
+**Updating dependencies**
 
-This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating youtube-dl.
+This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
 
-You would want to check the latest release of [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases) and include the latest version in your requirements.txt in the following format:
-
-```
-git+https://github.com/Rapptz/discord.py@master#egg=discord.py[voice]
-pip
-youtube_dl==2019.10.16
-colorlog
-cffi --only-binary all; 
-aiohttp ~= 3.5.4
-websockets>=6.0,<7.0
-chardet
-opuslib
-pynacl==1.2.1
-```
-Here's an example format given above. It's using the current version at the time of this writing (youtube-dl 2019.10.16), simply replace the version with the latest one found in the releases section of youtube-dl.
+The important ones are [discord.py](https://github.com/Rapptz/discord.py/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and replace the version numbers in the requirements.txt file.
 
 Also, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
 
