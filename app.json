@@ -1,0 +1,16 @@
+{
+  "name": "Discord MusicBot",
+  "description": "RhinoBot Discord music bot",
+  "repository": "https://github.com/helionmusic/rhinobot_heroku",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/codeinteger6/heroku-buildpack-libopus.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
