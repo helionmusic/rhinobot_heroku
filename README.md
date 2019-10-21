@@ -30,7 +30,7 @@ https://discordapp.com/api/oauth2/authorize?client_id=INSERTHERE&permissions=775
 
 Replace `INSERTHERE` in the URL with the bot client ID found in the Discord developer portal.
   
-Clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window. If you want an earlier version of the bot for whatever reason, check out the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
+[Download Git](https://git-scm.com/) if you don't already have it installed, then clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window.
 
 
 Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
@@ -57,8 +57,7 @@ If you're on windows and the setup fails to correctly set the PATH variable, do 
 
 To confirm Heroku CLI is installed correctly and the PATH variables have been set correctly, open a command prompt and type `heroku --version`. You should see a valid output if everything is fine
 
-  
-If you haven't already, install git (should also be included in the heroku installation)  
+
 To confirm if git is installed correctly and its PATH variables have been set correctly, open a command prompt and type `git --version`. You should see a valid output if everything is fine.  
 If not, add the git's `bin` folder to the PATH variables the same way as above  
 
