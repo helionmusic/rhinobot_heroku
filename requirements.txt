@@ -1,6 +1,6 @@
 discord.py[voice]>=1.2.5
 pip
-youtube_dl>=2019.10.16
+youtube_dl>=2020.01.15
 colorlog
 cffi --only-binary all; 
 aiohttp>=3.3.0,<3.6.0
