@@ -85,13 +85,11 @@ To do this, type ``heroku ps:scale worker=1`` in the command prompt.
 That's it. The bot should instantly fire up and should be logged in to your discord server within the next minute.  
 If you've set it to auto join a voice channel it should automatically join it.
 
-**Updating dependencies**
+**Updating youtube-dl**
 
-This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
+This bot relies on [youtube-dl](https://github.com/ytdl-org/youtube-dl) to make the bot work. If the bot suddenly stops working for any reason, try updating it.
 
-The important ones are [discord.py](https://github.com/Rapptz/discord.py/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and replace the version numbers in the requirements.txt file.
-
-Also, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
+Check the latest release of youtube-dl on their [releases](https://github.com/ytdl-org/youtube-dl/releases) and replace the version number in the requirements.txt file.
 
 # _____________________________________
 # Contributors
