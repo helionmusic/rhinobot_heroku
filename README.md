@@ -4,11 +4,11 @@ Just a quick note: ***This is not in any way official***. This is just a guide o
 
 **As this bot is modified from the original version, do not expect any support for it on their official Discord server. They will NOT help you. You may open an issue here if you think it's a Heroku related issue and we can try to help but please try updating the dependencies first using the instructions given near the end of this readme to see if it fixes your problem.**
 
-The original MusicBot is available [here](https://github.com/Just-Some-Bots/MusicBot).
+The original MusicBot is available [here](https://github.com/Just-Some-Bots/MusicBot), however starting from release-010620u we have switched to the unofficial fork of the bot maintained by Team-JSB. You can find it [here](https://github.com/Team-JSB/MusicBot).
 
 This is to host the Discord music bot onto your own free Heroku cloud account.
 
-This branch is based on MusicBot release-260819. Previous releases of the bot can be found in the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
+This branch is based on MusicBot release-010620u. Previous releases of the bot can be found in the [releases page](https://github.com/helionmusic/rhinobot_heroku/releases).
 
 ### Instructions to get this up and working:
 **Your bot will be shut down by Heroku on the last week of each month. If you're ok with this, you can follow the tutorial below. Otherwise you will need to add a credit card to have enough hours for a whole month (provided you don't have any other applications on your Heroku account)**
@@ -23,10 +23,10 @@ This is the method I personally used to get it up and running.
 
 **Instructions:**
 
-First of all: [Create a Discord Bot account](https://discordapp.com/developers)  
+First of all: [Create a Discord Bot account](https://discord.com/developers)  
 Don't forget to add it to your Discord server using this URL:
 
-https://discordapp.com/api/oauth2/authorize?client_id=INSERTHERE&permissions=775285841&scope=bot
+https://discord.com/api/oauth2/authorize?client_id=INSERTHERE&permissions=775285841&scope=bot
 
 Replace `INSERTHERE` in the URL with the bot client ID found in the Discord developer portal.
   
@@ -34,7 +34,7 @@ Replace `INSERTHERE` in the URL with the bot client ID found in the Discord deve
 
 
 Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
-If you are unsure how to do this step, refer to the MusicBot configuration guide [here](https://just-some-bots.github.io/MusicBot/using/configuration/)  
+If you are unsure how to do this step, refer to the MusicBot configuration guide [here](https://team-jsb.github.io/MusicBot/using/configuration/)  
 Edit the `options.ini` and the `permissions.ini` to your liking.  
 Remember however to leave the `SaveVideos = no` in your options otherwise you will quickly run out of space on the Heroku server.
 
@@ -85,11 +85,13 @@ To do this, type ``heroku ps:scale worker=1`` in the command prompt.
 That's it. The bot should instantly fire up and should be logged in to your discord server within the next minute.  
 If you've set it to auto join a voice channel it should automatically join it.
 
-**Updating youtube-dl**
+**Updating dependencies**
 
-This bot relies on [youtube-dl](https://github.com/ytdl-org/youtube-dl) to make the bot work. If the bot suddenly stops working for any reason, try updating it.
+This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
 
-Check the latest release of youtube-dl on their [releases](https://github.com/ytdl-org/youtube-dl/releases) and replace the version number in the requirements.txt file.
+The important ones are [discord.py](https://github.com/Rapptz/discord.py/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and replace the version numbers in the requirements.txt file.
+
+Also, check the [requirements.txt file of discord.py](https://github.com/Rapptz/discord.py/blob/master/requirements.txt) and if they've updated the aiohttp and websockets requirements, copy and paste them into the Heroku MusicBot's requirements.txt file.
 
 # _____________________________________
 # Contributors
@@ -105,8 +107,8 @@ Check the latest release of youtube-dl on their [releases](https://github.com/yt
 
 # MusicBot
 
-[![GitHub stars](https://img.shields.io/github/stars/Just-Some-Bots/MusicBot.svg)](https://github.com/Just-Some-Bots/MusicBot/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Just-Some-Bots/MusicBot.svg)](https://github.com/Just-Some-Bots/MusicBot/network)
+[![GitHub stars](https://img.shields.io/github/stars/Team-JSB/MusicBot.svg)](https://github.com/Team-JSB/MusicBot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Team-JSB/MusicBot.svg)](https://github.com/Team-JSB/MusicBot/network)
 [![Python version](https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7-blue.svg)](https://python.org)
 [![Discord](https://discordapp.com/api/guilds/129489631539494912/widget.png?style=shield)](https://discord.gg/bots)
 
@@ -115,13 +117,14 @@ MusicBot is the original Discord music bot written for [Python](https://www.pyth
 ![Main](https://i.imgur.com/FWcHtcS.png)
 
 ## Setup
-Setting up the MusicBot is relatively painless - just follow one of the [guides](https://just-some-bots.github.io/MusicBot/). After that, configure the bot to ensure its connection to Discord.
+
+Setting up the MusicBot is relatively painless - just follow one of the [guides](https://team-jsb.github.io/MusicBot/). After that, configure the bot to ensure its connection to Discord.
 
 The main configuration file is `config/options.ini`, but it is not included by default. Simply make a copy of `example_options.ini` and rename it to `options.ini`. See `example_options.ini` for more information about configurations.
 
 ### Commands
 
-There are many commands that can be used with the bot. Most notably, the `play <url>` command (preceded by your command prefix) will download, process, and play a song from YouTube or a similar site. A full list of commands is available [here](https://just-some-bots.github.io/MusicBot/using/commands/ "Commands").
+There are many commands that can be used with the bot. Most notably, the `play <url>` command (preceded by your command prefix) will download, process, and play a song from YouTube or a similar site. A full list of commands is available [here](https://team-jsb.github.io/MusicBot/using/commands/ "Commands").
 
 ### Further reading
 

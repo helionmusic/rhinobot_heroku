@@ -176,7 +176,11 @@ def finalize_logging():
     dlog = logging.getLogger('discord')
     dlh = logging.StreamHandler(stream=sys.stdout)
     dlh.terminator = ''
-    dlh.setFormatter(logging.Formatter('.'))
+    try:
+        dlh.setFormatter(logging.Formatter('.'))
+    except ValueError:
+        dlh.setFormatter(logging.Formatter('.', validate=False)
+                         )  # pylint: disable=unexpected-keyword-arg
     dlog.addHandler(dlh)
 
 
@@ -188,7 +192,7 @@ def bugger_off(msg="Press enter to continue . . .", code=1):
 # TODO: all of this
 def sanity_checks(optional=True):
     log.info("Starting sanity checks")
-    ## Required
+    # Required
 
     # Make sure we're on Python 3.5+
     req_ensure_py3()
@@ -207,7 +211,7 @@ def sanity_checks(optional=True):
 
     log.info("Required checks passed.")
 
-    ## Optional
+    # Optional
     if not optional:
         return
 
@@ -221,7 +225,8 @@ def req_ensure_py3():
     log.info("Checking for Python 3.5+")
 
     if sys.version_info < (3, 5):
-        log.warning("Python 3.5+ is required. This version is %s", sys.version.split()[0])
+        log.warning("Python 3.5+ is required. This version is %s",
+                    sys.version.split()[0])
         log.warning("Attempting to locate Python 3.5...")
 
         pycom = None
@@ -251,15 +256,18 @@ def req_ensure_py3():
         else:
             log.info('Trying "python3.5"')
             try:
-                pycom = subprocess.check_output('python3.5 -c "exit()"'.split()).strip().decode()
+                pycom = subprocess.check_output(
+                    'python3.5 -c "exit()"'.split()).strip().decode()
             except:
                 pass
 
             if pycom:
-                log.info("\nPython 3 found.  Re-launching bot using: %s run.py\n", pycom)
+                log.info(
+                    "\nPython 3 found.  Re-launching bot using: %s run.py\n", pycom)
                 pyexec(pycom, 'run.py')
 
-        log.critical("Could not find Python 3.5 or higher.  Please run the bot using Python 3.5")
+        log.critical(
+            "Could not find Python 3.5 or higher.  Please run the bot using Python 3.5")
         bugger_off()
 
 
@@ -267,7 +275,8 @@ def req_check_deps():
     try:
         import discord
         if discord.version_info.major < 1:
-            log.critical("This version of MusicBot requires a newer version of discord.py (1.0+). Your version is {0}. Try running update.py.".format(discord.__version__))
+            log.critical(
+                "This version of MusicBot requires a newer version of discord.py (1.0+). Your version is {0}. Try running update.py.".format(discord.__version__))
             bugger_off()
     except ImportError:
         # if we can't import discord.py, an error will be thrown later down the line anyway
@@ -281,8 +290,9 @@ def req_ensure_encoding():
         log.info("Setting console encoding to UTF-8")
 
         import io
-        sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf8', line_buffering=True)
-        # only slightly evil    
+        sys.stdout = io.TextIOWrapper(
+            sys.stdout.detach(), encoding='utf8', line_buffering=True)
+        # only slightly evil
         sys.__stdout__ = sh.stream = sys.stdout
 
         if os.environ.get('PYCHARM_HOSTED', None) not in (None, '0'):
@@ -294,15 +304,18 @@ def req_ensure_env():
     log.info("Ensuring we're in the right environment")
 
     # if os.environ.get('APP_ENV') != 'docker' and not os.path.isdir(b64decode('LmdpdA==').decode('utf-8')):
-    #     log.critical(b64decode('Qm90IHdhc24ndCBpbnN0YWxsZWQgdXNpbmcgR2l0LiBSZWluc3RhbGwgdXNpbmcgaHR0cDovL2JpdC5seS9tdXNpY2JvdGRvY3Mu').decode('utf-8'))
+    #     log.critical(b64decode(
+    #         'VGhlIGJvdCB3YXNuJ3QgaW5zdGFsbGVkIHVzaW5nIEdpdC4gUmVpbnN0YWxsIHVzaW5nIGh0dHBzOi8vYml0Lmx5L2pzY211c2ljYm90ZG9jcy4=').decode('utf-8'))
     #     bugger_off()
 
     try:
         assert os.path.isdir('config'), 'folder "config" not found'
         assert os.path.isdir('musicbot'), 'folder "musicbot" not found'
-        assert os.path.isfile('musicbot/__init__.py'), 'musicbot folder is not a Python module'
+        assert os.path.isfile(
+            'musicbot/__init__.py'), 'musicbot folder is not a Python module'
 
-        assert importlib.util.find_spec('musicbot'), "musicbot module is not importable"
+        assert importlib.util.find_spec(
+            'musicbot'), "musicbot module is not importable"
     except AssertionError as e:
         log.critical("Failed environment check, %s", e)
         bugger_off()
@@ -319,16 +332,18 @@ def req_ensure_env():
     if sys.platform.startswith('win'):
         log.info("Adding local bins/ folder to path")
         os.environ['PATH'] += ';' + os.path.abspath('bin/')
-        sys.path.append(os.path.abspath('bin/')) # might as well
+        sys.path.append(os.path.abspath('bin/'))  # might as well
 
 
 def req_ensure_folders():
     pathlib.Path('logs').mkdir(exist_ok=True)
     pathlib.Path('data').mkdir(exist_ok=True)
 
+
 def opt_check_disk_space(warnlimit_mb=200):
     if disk_usage('.').free < warnlimit_mb*1024*2:
-        log.warning("Less than %sMB of free space remains on this device" % warnlimit_mb)
+        log.warning(
+            "Less than %sMB of free space remains on this device" % warnlimit_mb)
 
 
 #################################################
@@ -387,7 +402,7 @@ def main():
 
                 err = PIP.run_install('--upgrade -r requirements.txt')
 
-                if err: # TODO: add the specific error check back as not to always tell users to sudo it
+                if err:  # TODO: add the specific error check back as not to always tell users to sudo it
                     print()
                     log.critical("You may need to %s to install dependencies." %
                                  ['use sudo', 'run as admin'][sys.platform.startswith('win')])
