@@ -33,9 +33,9 @@ Replace `INSERTHERE` in the URL with the bot client ID found in the Discord deve
 [Download Git](https://git-scm.com/) if you don't already have it installed, then clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window.
 
 
-Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration.  
+Now, edit the `options.ini` file inside the `config` folder to set your bot's necessary configuration. [Notepad++](https://notepad-plus-plus.org/downloads/) is recommended to edit the file. 
 If you are unsure how to do this step, refer to the MusicBot configuration guide [here](https://team-jsb.github.io/MusicBot/using/configuration/)  
-Edit the `options.ini` and the `permissions.ini` to your liking.  
+Next, edit the `permissions.ini` file to your liking.  
 Remember however to leave the `SaveVideos = no` in your options otherwise you will quickly run out of space on the Heroku server.
 
 **NEVER MAKE YOUR BOT TOKEN PUBLIC AS ANYONE CAN USE THE TOKEN TO "HIJACK" THE BOT. You can regenerate the bot token via the Discord developer portal if you accidentally made it public anywhere.**
