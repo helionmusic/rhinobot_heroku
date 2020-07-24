@@ -1,6 +1,6 @@
 ---
 name: Bot not working
-about: Bot not working? Select this option.
+about: Is the bot crashing or behaving unexpectedly? Choose this option.
 title: ''
 labels: issue
 assignees: ''
