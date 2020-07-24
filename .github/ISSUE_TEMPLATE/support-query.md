@@ -1,6 +1,6 @@
 ---
 name: Support query
-about: For help figuring out how to use the bot.
+about: Get support regarding operation of the bot.
 title: ''
 labels: question
 assignees: ''
