@@ -7,7 +7,11 @@ assignees: ''
 
 ---
 
-**Describe the problem** <!-- Please describe your problem below this line -->
+**Describe the problem** <!-- Please describe your problem below this line. Screenshots would be helpful. -->
+
+**Steps to reproduce** <!-- Please describe the steps to reproduce the issue, it would really help us. -->
+
+**Expected behaviour** <!-- What should actually happen when doing the above steps? -->
 
 **Have you followed all the instructions?** <!-- Replace the [ ] below with [X] to indicate you followed the instructions. Otherwise, please go back and try to deploy the bot again following the instructions properly. -->
 - [ ] Yes, I followed the instructions properly.
