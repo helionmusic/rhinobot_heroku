@@ -1,7 +1,7 @@
 discord.py[voice]==1.5.1
 websockets
 pip
-youtube_dl==2020.11.17
+youtube_dl==2020.11.18
 colorlog
 cffi --only-binary all; 
 chardet
