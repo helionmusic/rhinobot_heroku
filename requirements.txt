@@ -1,4 +1,4 @@
-discord.py[voice]==1.7.1
+discord.py[voice]==1.7.2
 websockets
 pip
 youtube_dl==2021.4.26
