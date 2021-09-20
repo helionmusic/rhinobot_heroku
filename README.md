@@ -28,7 +28,7 @@ Don't forget to add it to your Discord server using this URL:
 
 https://discord.com/api/oauth2/authorize?client_id=INSERTHERE&permissions=775285841&scope=bot
 
-Replace `INSERTHERE` in the URL with the bot client ID found in the Discord developer portal.
+Replace `INSERTHERE` in the URL with the application ID found in the Discord developer portal.
   
 [Download Git](https://git-scm.com/) if you don't already have it installed, then clone this repository by typing `git clone https://github.com/helionmusic/rhinobot_heroku` in a Git window.
 
