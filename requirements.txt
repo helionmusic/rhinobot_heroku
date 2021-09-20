@@ -2,7 +2,7 @@ discord.py[voice]==1.7.3
 websockets
 pip
 youtube_dl==2021.6.6
-colorlog==5.0.1
+colorlog==6.4.1
 cffi --only-binary all; 
 chardet
 opuslib
