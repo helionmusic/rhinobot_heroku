@@ -89,7 +89,7 @@ If you've set it to auto join a voice channel it should automatically join it.
 
 This bot relies on several components listed in the [requirements.txt](https://github.com/helionmusic/rhinobot_heroku/blob/master/requirements.txt) file to make it work. If the bot suddenly stops working for any reason, try updating the dependencies.
 
-The important ones are [discord.py](https://github.com/Rapptz/discord.py/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and replace the version numbers in the requirements.txt file.
+The important ones are [py-cord](https://github.com/Pycord-Development/pycord/releases) and [youtube-dl](https://github.com/ytdl-org/youtube-dl/releases). You would want to check the latest release of these two dependencies and replace the version numbers in the requirements.txt file.
 
 # _____________________________________
 # Contributors
