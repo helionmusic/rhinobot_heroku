@@ -95,7 +95,7 @@ The important ones are [py-cord](https://github.com/Pycord-Development/pycord/re
 # Contributors
 
 * [HelionMusic](https://github.com/helionmusic)
-* [codeinteger6](https://github.com/codeinteger6)
+* [infinitepower18](https://github.com/infinitepower18)
 * [SnGmng](https://github.com/SnGmng)
 
 
