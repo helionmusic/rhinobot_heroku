@@ -1,4 +1,4 @@
-py-cord[voice]==2.0.0b7
+py-cord[voice]==2.0.0rc1
 websockets
 pip
 youtube_dl==2021.12.17
