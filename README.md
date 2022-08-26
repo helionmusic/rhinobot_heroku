@@ -1,7 +1,7 @@
 # MusicBot for Heroku
 
 ## IMPORTANT NOTICE
-Heroku will be ending its free services on November 28 2022. You're better off looking for alternate solutions. If you still want to continue using this, feel free to read the rest of this readme
+Heroku will be ending its free services on November 28 2022. You're better off looking for alternate solutions.
 
 ## This repo is a *non-official* version of MusicBot ready for deployment on Heroku
 
