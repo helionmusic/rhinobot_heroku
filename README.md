@@ -1,4 +1,9 @@
-# This repo is a *non-official* version of MusicBot ready for deployment on Heroku
+# MusicBot for Heroku
+
+## IMPORTANT NOTICE
+Heroku will be ending its free services on November 28 2022. You're better off looking for alternate solutions. If you still want to continue using this, feel free to read the rest of this readme
+
+## This repo is a *non-official* version of MusicBot ready for deployment on Heroku
 
 Just a quick note: ***This is not in any way official***. This is just a guide on how to get the bot hosted on Heroku's free cloud service. There might be much better services out there but this works for me and so this repo is showing you how to go about setting it up yourself.
 
